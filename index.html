@@ -2,48 +2,185 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Bundesliga Tabelle 2025/26</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Football Universe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.05);
+            position: sticky;
+            top: 0;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #00ff88;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: #00cc6a;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(0,255,136,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        @media(max-width:768px){
+            .hero h2 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
 <body>
 
-    <h1>Bundesliga Tabelle Saison 2025/26</h1>
+<header>
+    <h1>⚽ Football Universe</h1>
+    <nav>
+        <a href="#wettbewerbe">Wettbewerbe</a>
+        <a href="#spieler">Spieler</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
 
-    <table border="1">
-        <tr>
-            <th>Platz</th>
-            <th>Team</th>
-            <th>Punkte</th>
-        </tr>
+<div class="hero">
+    <h2>Alles über Fußball an einem Ort</h2>
+    <p>Erkunde Wettbewerbe, legendäre Spieler und spannende Fakten aus der Welt des Fußballs.</p>
+    <button class="btn" onclick="scrollToSection()">Mehr entdecken</button>
+</div>
 
-        <tr>
-            <td>1</td>
-            <td>FC Bayern München</td>
-            <td>44</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Borussia Dortmund</td>
-            <td>33</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>RB Leipzig</td>
-            <td>29</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Bayer 04 Leverkusen</td>
-            <td>29</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>VfB Stuttgart</td>
-            <td>29</td>
-        </tr>
-    </table>
+<section id="wettbewerbe">
+    <h2>🌍 Große Wettbewerbe</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🏆 Weltmeisterschaft</h3>
+            <p>Das größte internationale Turnier im Fußball.</p>
+        </div>
+        <div class="card">
+            <h3>⭐ Champions League</h3>
+            <p>Die besten Clubs Europas kämpfen um den Titel.</p>
+        </div>
+        <div class="card">
+            <h3>🇩🇪 Bundesliga</h3>
+            <p>Deutschlands höchste Fußballliga.</p>
+        </div>
+    </div>
+</section>
 
-    <p>Stand: laufende Saison 2025/26</p>
+<section id="spieler">
+    <h2>🔥 Legendäre Spieler</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Lionel Messi</h3>
+            <p>Einer der größten Spieler aller Zeiten.</p>
+        </div>
+        <div class="card">
+            <h3>Cristiano Ronaldo</h3>
+            <p>Rekordjäger und Fußball-Ikone.</p>
+        </div>
+        <div class="card">
+            <h3>Pelé</h3>
+            <p>Brasilianische Legende und Weltmeister.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="kontakt">
+    <p>© 2026 Football Universe | Erstellt für GitHub Pages</p>
+</footer>
+
+<script>
+function scrollToSection() {
+    document.getElementById("wettbewerbe").scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
